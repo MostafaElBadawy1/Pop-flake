@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A6C2B783290E97B500B8491A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C2B782290E97B500B8491A /* AppDelegate.swift */; };
+		A6C2B785290E97B500B8491A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C2B784290E97B500B8491A /* SceneDelegate.swift */; };
+		A6C2B787290E97B500B8491A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C2B786290E97B500B8491A /* ViewController.swift */; };
+		A6C2B78A290E97B500B8491A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6C2B788290E97B500B8491A /* Main.storyboard */; };
+		A6C2B78D290E97B500B8491A /* Pop_flake.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A6C2B78B290E97B500B8491A /* Pop_flake.xcdatamodeld */; };
+		A6C2B78F290E97B700B8491A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C2B78E290E97B700B8491A /* Assets.xcassets */; };
+		A6C2B792290E97B700B8491A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6C2B790290E97B700B8491A /* LaunchScreen.storyboard */; };
+		A6C2B79D290E97B700B8491A /* Pop_flakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C2B79C290E97B700B8491A /* Pop_flakeTests.swift */; };
+		A6C2B7A7290E97B700B8491A /* Pop_flakeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C2B7A6290E97B700B8491A /* Pop_flakeUITests.swift */; };
+		A6C2B7A9290E97B700B8491A /* Pop_flakeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C2B7A8290E97B700B8491A /* Pop_flakeUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A6C2B799290E97B700B8491A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6C2B777290E97B500B8491A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6C2B77E290E97B500B8491A;
+			remoteInfo = "Pop-flake";
+		};
+		A6C2B7A3290E97B700B8491A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6C2B777290E97B500B8491A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6C2B77E290E97B500B8491A;
+			remoteInfo = "Pop-flake";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A6C2B77F290E97B500B8491A /* Pop-flake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pop-flake.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6C2B782290E97B500B8491A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A6C2B784290E97B500B8491A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A6C2B786290E97B500B8491A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A6C2B789290E97B500B8491A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A6C2B78C290E97B500B8491A /* Pop_flake.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pop_flake.xcdatamodel; sourceTree = "<group>"; };
+		A6C2B78E290E97B700B8491A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A6C2B791290E97B700B8491A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A6C2B793290E97B700B8491A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6C2B798290E97B700B8491A /* Pop-flakeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pop-flakeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6C2B79C290E97B700B8491A /* Pop_flakeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pop_flakeTests.swift; sourceTree = "<group>"; };
+		A6C2B7A2290E97B700B8491A /* Pop-flakeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pop-flakeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6C2B7A6290E97B700B8491A /* Pop_flakeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pop_flakeUITests.swift; sourceTree = "<group>"; };
+		A6C2B7A8290E97B700B8491A /* Pop_flakeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pop_flakeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A6C2B77C290E97B500B8491A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6C2B795290E97B700B8491A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6C2B79F290E97B700B8491A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A6C2B776290E97B500B8491A = {
+			isa = PBXGroup;
+			children = (
+				A6C2B781290E97B500B8491A /* Pop-flake */,
+				A6C2B79B290E97B700B8491A /* Pop-flakeTests */,
+				A6C2B7A5290E97B700B8491A /* Pop-flakeUITests */,
+				A6C2B780290E97B500B8491A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A6C2B780290E97B500B8491A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A6C2B77F290E97B500B8491A /* Pop-flake.app */,
+				A6C2B798290E97B700B8491A /* Pop-flakeTests.xctest */,
+				A6C2B7A2290E97B700B8491A /* Pop-flakeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A6C2B781290E97B500B8491A /* Pop-flake */ = {
+			isa = PBXGroup;
+			children = (
+				A6C2B782290E97B500B8491A /* AppDelegate.swift */,
+				A6C2B784290E97B500B8491A /* SceneDelegate.swift */,
+				A6C2B786290E97B500B8491A /* ViewController.swift */,
+				A6C2B788290E97B500B8491A /* Main.storyboard */,
+				A6C2B78E290E97B700B8491A /* Assets.xcassets */,
+				A6C2B790290E97B700B8491A /* LaunchScreen.storyboard */,
+				A6C2B793290E97B700B8491A /* Info.plist */,
+				A6C2B78B290E97B500B8491A /* Pop_flake.xcdatamodeld */,
+			);
+			path = "Pop-flake";
+			sourceTree = "<group>";
+		};
+		A6C2B79B290E97B700B8491A /* Pop-flakeTests */ = {
+			isa = PBXGroup;
+			children = (
+				A6C2B79C290E97B700B8491A /* Pop_flakeTests.swift */,
+			);
+			path = "Pop-flakeTests";
+			sourceTree = "<group>";
+		};
+		A6C2B7A5290E97B700B8491A /* Pop-flakeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A6C2B7A6290E97B700B8491A /* Pop_flakeUITests.swift */,
+				A6C2B7A8290E97B700B8491A /* Pop_flakeUITestsLaunchTests.swift */,
+			);
+			path = "Pop-flakeUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A6C2B77E290E97B500B8491A /* Pop-flake */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6C2B7AC290E97B700B8491A /* Build configuration list for PBXNativeTarget "Pop-flake" */;
+			buildPhases = (
+				A6C2B77B290E97B500B8491A /* Sources */,
+				A6C2B77C290E97B500B8491A /* Frameworks */,
+				A6C2B77D290E97B500B8491A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pop-flake";
+			productName = "Pop-flake";
+			productReference = A6C2B77F290E97B500B8491A /* Pop-flake.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A6C2B797290E97B700B8491A /* Pop-flakeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6C2B7AF290E97B700B8491A /* Build configuration list for PBXNativeTarget "Pop-flakeTests" */;
+			buildPhases = (
+				A6C2B794290E97B700B8491A /* Sources */,
+				A6C2B795290E97B700B8491A /* Frameworks */,
+				A6C2B796290E97B700B8491A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6C2B79A290E97B700B8491A /* PBXTargetDependency */,
+			);
+			name = "Pop-flakeTests";
+			productName = "Pop-flakeTests";
+			productReference = A6C2B798290E97B700B8491A /* Pop-flakeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A6C2B7A1290E97B700B8491A /* Pop-flakeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6C2B7B2290E97B700B8491A /* Build configuration list for PBXNativeTarget "Pop-flakeUITests" */;
+			buildPhases = (
+				A6C2B79E290E97B700B8491A /* Sources */,
+				A6C2B79F290E97B700B8491A /* Frameworks */,
+				A6C2B7A0290E97B700B8491A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6C2B7A4290E97B700B8491A /* PBXTargetDependency */,
+			);
+			name = "Pop-flakeUITests";
+			productName = "Pop-flakeUITests";
+			productReference = A6C2B7A2290E97B700B8491A /* Pop-flakeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A6C2B777290E97B500B8491A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					A6C2B77E290E97B500B8491A = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					A6C2B797290E97B700B8491A = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = A6C2B77E290E97B500B8491A;
+					};
+					A6C2B7A1290E97B700B8491A = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = A6C2B77E290E97B500B8491A;
+					};
+				};
+			};
+			buildConfigurationList = A6C2B77A290E97B500B8491A /* Build configuration list for PBXProject "Pop-flake" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A6C2B776290E97B500B8491A;
+			productRefGroup = A6C2B780290E97B500B8491A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A6C2B77E290E97B500B8491A /* Pop-flake */,
+				A6C2B797290E97B700B8491A /* Pop-flakeTests */,
+				A6C2B7A1290E97B700B8491A /* Pop-flakeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A6C2B77D290E97B500B8491A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6C2B792290E97B700B8491A /* LaunchScreen.storyboard in Resources */,
+				A6C2B78F290E97B700B8491A /* Assets.xcassets in Resources */,
+				A6C2B78A290E97B500B8491A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6C2B796290E97B700B8491A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6C2B7A0290E97B700B8491A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A6C2B77B290E97B500B8491A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6C2B787290E97B500B8491A /* ViewController.swift in Sources */,
+				A6C2B783290E97B500B8491A /* AppDelegate.swift in Sources */,
+				A6C2B785290E97B500B8491A /* SceneDelegate.swift in Sources */,
+				A6C2B78D290E97B500B8491A /* Pop_flake.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6C2B794290E97B700B8491A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6C2B79D290E97B700B8491A /* Pop_flakeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6C2B79E290E97B700B8491A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6C2B7A9290E97B700B8491A /* Pop_flakeUITestsLaunchTests.swift in Sources */,
+				A6C2B7A7290E97B700B8491A /* Pop_flakeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A6C2B79A290E97B700B8491A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6C2B77E290E97B500B8491A /* Pop-flake */;
+			targetProxy = A6C2B799290E97B700B8491A /* PBXContainerItemProxy */;
+		};
+		A6C2B7A4290E97B700B8491A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6C2B77E290E97B500B8491A /* Pop-flake */;
+			targetProxy = A6C2B7A3290E97B700B8491A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A6C2B788290E97B500B8491A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6C2B789290E97B500B8491A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A6C2B790290E97B700B8491A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6C2B791290E97B700B8491A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A6C2B7AA290E97B700B8491A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A6C2B7AB290E97B700B8491A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A6C2B7AD290E97B700B8491A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HK3DJJFRK7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pop-flake/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mostafa.Pop-flake";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A6C2B7AE290E97B700B8491A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HK3DJJFRK7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pop-flake/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mostafa.Pop-flake";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A6C2B7B0290E97B700B8491A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HK3DJJFRK7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mostafa.Pop-flakeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pop-flake.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pop-flake";
+			};
+			name = Debug;
+		};
+		A6C2B7B1290E97B700B8491A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HK3DJJFRK7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mostafa.Pop-flakeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pop-flake.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pop-flake";
+			};
+			name = Release;
+		};
+		A6C2B7B3290E97B700B8491A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HK3DJJFRK7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mostafa.Pop-flakeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Pop-flake";
+			};
+			name = Debug;
+		};
+		A6C2B7B4290E97B700B8491A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HK3DJJFRK7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mostafa.Pop-flakeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Pop-flake";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A6C2B77A290E97B500B8491A /* Build configuration list for PBXProject "Pop-flake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6C2B7AA290E97B700B8491A /* Debug */,
+				A6C2B7AB290E97B700B8491A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6C2B7AC290E97B700B8491A /* Build configuration list for PBXNativeTarget "Pop-flake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6C2B7AD290E97B700B8491A /* Debug */,
+				A6C2B7AE290E97B700B8491A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6C2B7AF290E97B700B8491A /* Build configuration list for PBXNativeTarget "Pop-flakeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6C2B7B0290E97B700B8491A /* Debug */,
+				A6C2B7B1290E97B700B8491A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6C2B7B2290E97B700B8491A /* Build configuration list for PBXNativeTarget "Pop-flakeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6C2B7B3290E97B700B8491A /* Debug */,
+				A6C2B7B4290E97B700B8491A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A6C2B78B290E97B500B8491A /* Pop_flake.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A6C2B78C290E97B500B8491A /* Pop_flake.xcdatamodel */,
+			);
+			currentVersion = A6C2B78C290E97B500B8491A /* Pop_flake.xcdatamodel */;
+			path = Pop_flake.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A6C2B777290E97B500B8491A /* Project object */;
+}
