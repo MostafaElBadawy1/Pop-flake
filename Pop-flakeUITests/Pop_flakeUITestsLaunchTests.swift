@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class Pop_flakeUITestsLaunchTests: XCTestCase {
+final class PopFlakeUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
