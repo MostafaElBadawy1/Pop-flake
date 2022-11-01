@@ -16,4 +16,6 @@ struct K {
     static let settingsTableViewCell = "SettingsTableViewCell"
     static let homeTableViewHeaderID = "HomeTableViewHeader"
     static let headerCollectionViewCellID = "HeaderCollectionViewCell"
+    static let inTheatersTableViewCellID = "InTheatersTableViewCell"
+    static let top250TableViewCellID = "Top250TableViewCell"
 }

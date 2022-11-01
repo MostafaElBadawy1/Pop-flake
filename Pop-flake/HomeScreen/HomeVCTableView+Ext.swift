@@ -11,7 +11,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         case 3:
             return 500
         default:
-            return 200
+            return 250
         }
     }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -26,12 +26,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return "Grossing"
         }
     }
-    //    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-    //        let titleView = view as? UITableViewHeaderFooterView
-    //        // titleView?.textLabel?.text = titleView?.textLabel?.text?.localizedCapitalized
-    //        titleView?.textLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-    //        titleView?.textLabel?.textColor = .white
-    //     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 4
     }
@@ -39,15 +33,24 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let comingSooncell = homeTableView.dequeueReusableCell(withIdentifier: K.commingSoonTableViewCell,
-                                                               for: indexPath) as? CommingSoonTableViewCell
-//        if indexPath.section == 3 {
-//            let grossingcell = homeTableView.dequeueReusableCell(withIdentifier: K.grossingTableViewCell
-//                                                                 ,for: indexPath) as? GrossingTableViewCell
-   //         return grossingcell!
-  //      } else {
+        let comingSooncell = homeTableView.dequeueReusableCell(withIdentifier:
+                                                                K.commingSoonTableViewCell) as? CommingSoonTableViewCell
+        let inTheatercell = homeTableView.dequeueReusableCell(withIdentifier:
+                                                                K.inTheatersTableViewCellID) as? InTheatersTableViewCell
+        let top250cell = homeTableView.dequeueReusableCell(withIdentifier:
+                                                            K.top250TableViewCellID) as? Top250TableViewCell
+        let grossingcell = homeTableView.dequeueReusableCell(withIdentifier:
+                                                                K.grossingTableViewCell) as? GrossingTableViewCell
+        switch indexPath.section {
+        case 0:
             return comingSooncell!
-       // }
+        case 1:
+            return inTheatercell!
+        case 2:
+            return top250cell!
+        default:
+            return grossingcell!
+        }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         homeTableView.deselectRow(at: indexPath, animated: true)
@@ -57,17 +60,3 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 //        return header
 //    }
 }
-//        switch indexPath.section {
-//        case 0:
-//            return comingSooncell!
-//        case 1:
-//            return comingSooncell!
-//        case 2:
-//            return comingSooncell!
-//        case 3:
-//
-//            return grossingcell!
-//        default:
-//           return comingSooncell!
-//        }
-

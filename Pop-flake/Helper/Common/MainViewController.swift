@@ -8,12 +8,6 @@ import UIKit
 class MainViewController: UIViewController {
     let refreshControl = UIRefreshControl()
     let activityIndicator = UIActivityIndicatorView(style: .medium)
-    //    func tableViewConfig<Cell: UITableViewCell>(tableView: UITableView, rowHeight: CGFloat, cellClass: Cell.Type) {
-      //      tableView.rowHeight = rowHeight
-      //      tableView.registerCellNib(cellClass: cellClass)
-//            refreshControl.addTarget(self, action: #selector(refreshTableView), for: .valueChanged)
-//            tableView.refreshControl = refreshControl
-   // }
     func presentAlert (title: String, message: String) {
         let alert: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))

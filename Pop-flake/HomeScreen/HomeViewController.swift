@@ -32,6 +32,10 @@ class HomeViewController: MainViewController {
                                forCellReuseIdentifier: K.commingSoonTableViewCell)
          homeTableView.register(UINib(nibName: K.grossingTableViewCell, bundle: .main),
                                forCellReuseIdentifier: K.grossingTableViewCell)
+        homeTableView.register(UINib(nibName: K.inTheatersTableViewCellID, bundle: .main),
+                               forCellReuseIdentifier: K.inTheatersTableViewCellID)
+        homeTableView.register(UINib(nibName: K.top250TableViewCellID, bundle: .main),
+                               forCellReuseIdentifier: K.top250TableViewCellID)
         homeTableView.register(HomeTableViewHeader.self, forHeaderFooterViewReuseIdentifier: K.homeTableViewHeaderID)
     }
     func appAppearanceConfig() {

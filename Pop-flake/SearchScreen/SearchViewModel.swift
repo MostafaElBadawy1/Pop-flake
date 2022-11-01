@@ -8,7 +8,7 @@ import Foundation
 class SearchViewModel {
     var movies = [SearchedMovie]()
     func fetchMovies(searchWord: String) async ->  [SearchedMovie]? {
-        let movies = try? await NetworkManger.shared.fetchData(url: URLs.shared.searchURL(searchWord: searchWord),
+        let movies = try? await NetworkManager.shared.fetchData(url: URLs.shared.searchURL(searchWord: searchWord),
                                                                model: SearchedMovies.self)
         return movies?.results
     }

@@ -13,8 +13,6 @@ class CommingSoonTableViewCell: UITableViewCell {
         super.awakeFromNib()
         collectionViewConfig()
         fetchComingSoonMovies()
-//        fetchInTheatersMovies()
-//        fetchTop250Movies()
     }
     func collectionViewConfig() {
         commingSoonCollectionView.delegate = self
@@ -34,31 +32,6 @@ class CommingSoonTableViewCell: UITableViewCell {
             }
         }
     }
-//    func fetchInTheatersMovies() {
-//        Task.init {
-//            if let inTheaterMovies = await homeViewModel.fetchInThratersMovies() {
-//                self.homeViewModel.inTheaterMovies = inTheaterMovies
-//                DispatchQueue.main.async {
-//                    self.commingSoonCollectionView.reloadData()
-//                }
-//            } else {
-//                print("error")
-//            }
-//        }
-//    }
-//    func fetchTop250Movies() {
-//        Task.init {
-//            if let top250Movies = await homeViewModel.fetchTop250Movies() {
-//                self.homeViewModel.top250Movies = top250Movies
-//                DispatchQueue.main.async {
-//                    self.commingSoonCollectionView.reloadData()
-//                }
-//            } else {
-//                print("error")
-//            }
-//        }
-//    }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
@@ -73,15 +46,15 @@ extension CommingSoonTableViewCell: UICollectionViewDelegate, UICollectionViewDa
                                                                  for: indexPath) as? MoviesCollectionViewCell
         cell!.movieNameLabel.text = homeViewModel.movies[indexPath.item].title
         cell?.yearLabel.text = homeViewModel.movies[indexPath.item].year
-        if let url = homeViewModel.movies[indexPath.row].image {
+        if let url = homeViewModel.movies[indexPath.item].image {
         cell!.movieImageView.kf.setImage(with: URL(string: url))
          }
          cell!.rankLabel.text =  homeViewModel.movies[indexPath.item].genres
-//         cell!.movieNameLabel.text = "Mostafa"
-//         cell?.yearLabel.text = "1997"
-//         cell!.rankLabel.text =  "asas, asdas, asdasd"
         cell?.durationLabel.isHidden = true
         return cell!
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        commingSoonCollectionView.deselectItem(at: indexPath, animated: true)
     }
 }
 extension CommingSoonTableViewCell: UICollectionViewDelegateFlowLayout {

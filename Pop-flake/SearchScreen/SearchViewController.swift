@@ -10,6 +10,11 @@ class SearchViewController: MainViewController {
     let noResultslabel = UILabel()
     let searchViewModel = SearchViewModel()
     var searchController = UISearchController()
+    let myRefreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(SearchViewController.self, action: #selector(refresh(sender:)), for: .valueChanged)
+        return refreshControl
+    }()
     // MARK: - IBOutlets
     @IBOutlet weak var searchResultsTableView: UITableView!
     override func viewDidLoad() {
@@ -29,6 +34,7 @@ class SearchViewController: MainViewController {
     }
     // MARK: - UI Methods
     func tableViewConfig() {
+        searchResultsTableView.refreshControl = myRefreshControl
         searchResultsTableView.register(UINib(nibName: K.moviesTableViewCellID, bundle: .main),
                                         forCellReuseIdentifier: K.moviesTableViewCellID)
         searchResultsTableView.delegate = self
@@ -49,6 +55,12 @@ class SearchViewController: MainViewController {
         noResultslabel.frame =  CGRect(x: 150, y: 130, width: 300, height: 50)
         self.view.addSubview(noResultslabel)
     }
+    @objc private func refresh(sender: UIRefreshControl) {
+        searchMovies(searchWord: "Suits")
+        self.searchResultsTableView.reloadData()
+        self.searchResultsTableView.isHidden = false
+        sender.endRefreshing()
+    }
     // MARK: - Data Methods
     func searchMovies(searchWord: String) {
         Task.init {
@@ -59,12 +71,13 @@ class SearchViewController: MainViewController {
                         self.searchResultsTableView.isHidden = true
                         self.labelConfig()
                     } else {
+                        self.searchResultsTableView.isHidden = false
                         self.searchResultsTableView.reloadData()
                         self.activityIndicator.stopAnimating()
                     }
                 }
             } else {
-               presentAlert(title: "Error While Searching.", message: "")
+                presentAlert(title: "Error While Fetching Movies.", message: "")
             }
         }
     }

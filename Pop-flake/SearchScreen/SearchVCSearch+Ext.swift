@@ -7,12 +7,20 @@
 import UIKit
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-       guard let text = searchController.searchBar.text else { return }
-        var urlString = text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(reload), object: nil)
+        self.perform(#selector(reload), with: nil, afterDelay: 1)
+    }
+    @objc func reload() {
+        guard let text = searchController.searchBar.text else { return }
+        let urlString = text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         searchMovies(searchWord: urlString!)
     }
-    func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let text = searchController.searchBar.text else { return }
+        let urlString = text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        searchMovies(searchWord: urlString!)
+    }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         initViewModel()
-        return true
     }
 }

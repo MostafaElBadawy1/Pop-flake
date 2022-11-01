@@ -16,6 +16,10 @@
 		A67B476B29105EF0004B6E1B /* HeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A67B476929105EF0004B6E1B /* HeaderCollectionViewCell.xib */; };
 		A67B476D2910651F004B6E1B /* TrailersCollectionViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67B476C2910651F004B6E1B /* TrailersCollectionViewHandler.swift */; };
 		A67B476F29106694004B6E1B /* Trailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67B476E29106694004B6E1B /* Trailer.swift */; };
+		A67B477729110A33004B6E1B /* InTheatersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67B477529110A33004B6E1B /* InTheatersTableViewCell.swift */; };
+		A67B477829110A33004B6E1B /* InTheatersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A67B477629110A33004B6E1B /* InTheatersTableViewCell.xib */; };
+		A67B477C29110F29004B6E1B /* Top250TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67B477A29110F29004B6E1B /* Top250TableViewCell.swift */; };
+		A67B477D29110F29004B6E1B /* Top250TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A67B477B29110F29004B6E1B /* Top250TableViewCell.xib */; };
 		A6928EB6290EBE3800BB92EB /* CommingSoonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6928EB4290EBE3800BB92EB /* CommingSoonTableViewCell.swift */; };
 		A6928EB7290EBE3800BB92EB /* CommingSoonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6928EB5290EBE3800BB92EB /* CommingSoonTableViewCell.xib */; };
 		A6A9C63B290EC04700CC3462 /* GrossingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A9C639290EC04700CC3462 /* GrossingTableViewCell.swift */; };
@@ -78,6 +82,10 @@
 		A67B476929105EF0004B6E1B /* HeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionViewCell.xib; sourceTree = "<group>"; };
 		A67B476C2910651F004B6E1B /* TrailersCollectionViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailersCollectionViewHandler.swift; sourceTree = "<group>"; };
 		A67B476E29106694004B6E1B /* Trailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailer.swift; sourceTree = "<group>"; };
+		A67B477529110A33004B6E1B /* InTheatersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InTheatersTableViewCell.swift; sourceTree = "<group>"; };
+		A67B477629110A33004B6E1B /* InTheatersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InTheatersTableViewCell.xib; sourceTree = "<group>"; };
+		A67B477A29110F29004B6E1B /* Top250TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top250TableViewCell.swift; sourceTree = "<group>"; };
+		A67B477B29110F29004B6E1B /* Top250TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Top250TableViewCell.xib; sourceTree = "<group>"; };
 		A6928EB4290EBE3800BB92EB /* CommingSoonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommingSoonTableViewCell.swift; sourceTree = "<group>"; };
 		A6928EB5290EBE3800BB92EB /* CommingSoonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommingSoonTableViewCell.xib; sourceTree = "<group>"; };
 		A6A9C639290EC04700CC3462 /* GrossingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrossingTableViewCell.swift; sourceTree = "<group>"; };
@@ -197,6 +205,24 @@
 			path = HeaderCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		A67B4770291104A2004B6E1B /* In-TheatersTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A67B477529110A33004B6E1B /* InTheatersTableViewCell.swift */,
+				A67B477629110A33004B6E1B /* InTheatersTableViewCell.xib */,
+			);
+			path = "In-TheatersTableViewCell";
+			sourceTree = "<group>";
+		};
+		A67B477929110F08004B6E1B /* Top250TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A67B477A29110F29004B6E1B /* Top250TableViewCell.swift */,
+				A67B477B29110F29004B6E1B /* Top250TableViewCell.xib */,
+			);
+			path = Top250TableViewCell;
+			sourceTree = "<group>";
+		};
 		A6928EAF290EB8AB00BB92EB /* CommingSoonTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +282,8 @@
 			isa = PBXGroup;
 			children = (
 				A6928EAF290EB8AB00BB92EB /* CommingSoonTableViewCell */,
+				A67B4770291104A2004B6E1B /* In-TheatersTableViewCell */,
+				A67B477929110F08004B6E1B /* Top250TableViewCell */,
 				A6A9C638290EC01F00CC3462 /* GrossingTableViewCell */,
 			);
 			path = MainTableViewCells;
@@ -474,10 +502,12 @@
 			files = (
 				A6C2B792290E97B700B8491A /* LaunchScreen.storyboard in Resources */,
 				A6A9C64C290ED02400CC3462 /* MoviesTableViewCell.xib in Resources */,
+				A67B477829110A33004B6E1B /* InTheatersTableViewCell.xib in Resources */,
 				A6928EB7290EBE3800BB92EB /* CommingSoonTableViewCell.xib in Resources */,
 				A6A9C63C290EC04700CC3462 /* GrossingTableViewCell.xib in Resources */,
 				A6C2B78F290E97B700B8491A /* Assets.xcassets in Resources */,
 				A67B476B29105EF0004B6E1B /* HeaderCollectionViewCell.xib in Resources */,
+				A67B477D29110F29004B6E1B /* Top250TableViewCell.xib in Resources */,
 				A6C2B78A290E97B500B8491A /* Main.storyboard in Resources */,
 				A6E3EFF4290F39E200DB32DC /* SettingsTableViewCell.xib in Resources */,
 				A6A9C642290EC3AB00CC3462 /* MoviesCollectionViewCell.xib in Resources */,
@@ -547,9 +577,11 @@
 				A6E3EFFC290F4B3700DB32DC /* SearchViewModel.swift in Sources */,
 				A67B476A29105EF0004B6E1B /* HeaderCollectionViewCell.swift in Sources */,
 				A6C2B78D290E97B500B8491A /* Pop_flake.xcdatamodeld in Sources */,
+				A67B477C29110F29004B6E1B /* Top250TableViewCell.swift in Sources */,
 				A6928EB6290EBE3800BB92EB /* CommingSoonTableViewCell.swift in Sources */,
 				A61A0687290EA2D0002A8C7D /* HomeViewModel.swift in Sources */,
 				A6E3EFE9290EEEA700DB32DC /* Movies.swift in Sources */,
+				A67B477729110A33004B6E1B /* InTheatersTableViewCell.swift in Sources */,
 				A6A9C64B290ED02400CC3462 /* MoviesTableViewCell.swift in Sources */,
 				A6E3EFF8290F49BB00DB32DC /* SearchVCTableView+Ext.swift in Sources */,
 				A61A0680290EA1B7002A8C7D /* HomeViewController.swift in Sources */,
