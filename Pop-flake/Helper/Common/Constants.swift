@@ -18,4 +18,6 @@ struct K {
     static let headerCollectionViewCellID = "HeaderCollectionViewCell"
     static let inTheatersTableViewCellID = "InTheatersTableViewCell"
     static let top250TableViewCellID = "Top250TableViewCell"
+    static let trailersTableViewHeaderID = "TrailersTableViewHeader"
+    static let complaintFormViewControllerID = "ComplaintFormViewController"
 }

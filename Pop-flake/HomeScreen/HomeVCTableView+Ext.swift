@@ -55,8 +55,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         homeTableView.deselectRow(at: indexPath, animated: true)
     }
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let header = homeTableView.dequeueReusableHeaderFooterView(withIdentifier: K.homeTableViewHeaderID)
-//        return header
-//    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = homeTableView.dequeueReusableHeaderFooterView(withIdentifier: K.trailersTableViewHeaderID)
+        return header
+    }
 }

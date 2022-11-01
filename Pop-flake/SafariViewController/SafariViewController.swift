@@ -9,11 +9,11 @@ import UIKit
 import WebKit
 class SafariViewController: UIViewController {
     let webView = WKWebView()
-    var movieId: URL?
+    var passedUrl: URL?
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(webView)
-                if let movieUrl = movieId {
+                if let movieUrl = passedUrl {
                     webView.load(URLRequest(url: movieUrl))
                     print(movieUrl)
                 }

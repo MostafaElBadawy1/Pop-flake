@@ -30,7 +30,7 @@ class SearchViewController: MainViewController {
     }
     func initViewModel() {
         let searchWord = K.searchWord.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-        searchMovies(searchWord: searchWord!)
+        // searchMovies(searchWord: searchWord!)
     }
     // MARK: - UI Methods
     func tableViewConfig() {

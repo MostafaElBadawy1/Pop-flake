@@ -10,7 +10,10 @@ class HomeViewModel {
     var inTheaterMovies = [Movie]()
     var top250Movies = [Movie]()
     var grossingMovies = [Movie]()
-    var trailer: Trailer?
+    var trailerOne: Trailer?
+    var trailerTwo: Trailer?
+    var trailerThree: Trailer?
+    var trailersArray = [Trailer]()
     func fetchCommingSoonMovies() async ->  [Movie]? {
         let movies = try? await NetworkManager.shared.fetchData(url: URLs.shared.commingSoonMoviesURL(),
                                                                 model: Movies.self)

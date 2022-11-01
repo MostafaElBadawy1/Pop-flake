@@ -10,8 +10,11 @@ struct URLs {
     static let shared = URLs()
     private init() {}
     let baseURL = "https://imdb-api.com/en/API/"
-    let apiKey = "k_i15edv6b"
+    // let apiKey = "k_i15edv6b"
     // k_ywfeiyqp
+     // let apiKey =  "k_infolaqy"
+   // let apiKey = "k_8ydcwvsd"
+    let apiKey = "k_36wium9j"
     func commingSoonMoviesURL() -> URL? {
         return URL(string: baseURL + "ComingSoon/\(apiKey)")
     }
@@ -28,6 +31,6 @@ struct URLs {
         return URL(string: baseURL + "SearchAll/\(apiKey)/\(searchWord)")
     }
     func youTubeTrailerURL(id: String) -> URL? {
-        return URL(string: baseURL + "YouTubeTrailer/\(apiKey)/\(id)")
+        return URL(string: baseURL + "Trailer/\(apiKey)/\(id)")
     }
 }

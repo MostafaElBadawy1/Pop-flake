@@ -7,6 +7,9 @@
 
 import Foundation
 struct Trailer: Codable {
+    let title: String?
     let fullTitle: String?
     let videoUrl: String?
+    let thumbnailUrl: String?
+    let errorMessage: String?
 }

@@ -29,8 +29,9 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         searchResultsTableView.deselectRow(at: indexPath, animated: true)
        let movieUrl = URL(string: "https://www.imdb.com/title/\(searchViewModel.movies[indexPath.row].id!)/")
         let safariVC = UIStoryboard(name: "Main",
-                                    bundle: nil).instantiateViewController(withIdentifier: K.safariViewControllerID) as? SafariViewController
-        safariVC?.movieId = movieUrl
+                                    bundle: nil).instantiateViewController(withIdentifier:
+                                                                            K.safariViewControllerID) as? SafariViewController
+        safariVC?.passedUrl = movieUrl
         navigationController?.pushViewController(safariVC!, animated: true)
     }
 }

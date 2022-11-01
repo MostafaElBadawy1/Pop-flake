@@ -18,11 +18,16 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         default:
             cell?.settingsLabel.text = "Send Complaints"
             cell?.switchControl.isHidden = true
-        
+            cell?.accessoryType = .disclosureIndicator
         }
         return cell!
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         settingsTableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.row == 1 {
+            let formVC = UIStoryboard(name: "Main",
+                                      bundle: nil).instantiateViewController(withIdentifier: K.complaintFormViewControllerID) as? ComplaintFormViewController
+            navigationController?.pushViewController(formVC!, animated: true)
+        }
     }
 }

@@ -11,7 +11,7 @@ class Top250TableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         collectionViewConfig()
-         fetchTop250Movies()
+       // fetchTop250Movies()
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
