@@ -12,7 +12,7 @@ class CommingSoonTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         collectionViewConfig()
-        //fetchComingSoonMovies()
+        fetchComingSoonMovies()
     }
     func collectionViewConfig() {
         commingSoonCollectionView.delegate = self

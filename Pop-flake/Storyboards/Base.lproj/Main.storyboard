@@ -69,6 +69,11 @@
                                     <cells/>
                                 </collectionView>
                             </tableView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="3Qg-M3-9aK">
+                                <rect key="frame" x="128" y="298" width="116" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" systemColor="systemYellowColor"/>
+                            </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rf5-6Q-rzF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -85,6 +90,7 @@
                     <connections>
                         <outlet property="headerCollectionView" destination="9XE-k7-aTM" id="7o1-69-wtZ"/>
                         <outlet property="homeTableView" destination="BsD-Ht-Dv3" id="8Gf-rW-44d"/>
+                        <outlet property="myPageControl" destination="3Qg-M3-9aK" id="Oey-1k-1SY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hFf-dk-nbj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -222,6 +228,9 @@
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

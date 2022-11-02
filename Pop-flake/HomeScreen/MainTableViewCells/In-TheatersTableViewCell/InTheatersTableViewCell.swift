@@ -13,7 +13,7 @@ class InTheatersTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         collectionViewConfig()
-       // fetchInTheatersMovies()
+        fetchInTheatersMovies()
     }
     func collectionViewConfig() {
         inTheatersCollectionView.delegate = self

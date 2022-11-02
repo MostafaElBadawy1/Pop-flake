@@ -22,4 +22,5 @@ struct Movie: Codable {
     let weeks: String?
     let gross: String?
     let genres: String?
+    let errorMessage: String?
 }

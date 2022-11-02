@@ -8,8 +8,10 @@ import UIKit
 class HomeViewController: MainViewController {
     // MARK: - Props
     let homeViewModel = HomeViewModel()
+    var timer = Timer()
     // MARK: - IBOutlets
     @IBOutlet weak var headerCollectionView: UICollectionView!
+    @IBOutlet weak var myPageControl: UIPageControl!
     @IBOutlet weak var homeTableView: UITableView!
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -22,10 +24,10 @@ class HomeViewController: MainViewController {
         tableViewConfig()
         collectionViewConfig()
         appAppearanceConfig()
-        // networkReachability(loadingIndicator: activityIndicator)
+        monitorNetwork()
     }
     func initViewModel() {
-       // fetchTrailers()
+        fetchTrailers()
     }
     // MARK: - UI Methods
     func tableViewConfig() {
@@ -33,7 +35,7 @@ class HomeViewController: MainViewController {
         homeTableView.dataSource = self
         homeTableView.register(UINib(nibName: K.commingSoonTableViewCell, bundle: .main),
                                forCellReuseIdentifier: K.commingSoonTableViewCell)
-         homeTableView.register(UINib(nibName: K.grossingTableViewCell, bundle: .main),
+        homeTableView.register(UINib(nibName: K.grossingTableViewCell, bundle: .main),
                                forCellReuseIdentifier: K.grossingTableViewCell)
         homeTableView.register(UINib(nibName: K.inTheatersTableViewCellID, bundle: .main),
                                forCellReuseIdentifier: K.inTheatersTableViewCellID)
@@ -41,10 +43,16 @@ class HomeViewController: MainViewController {
                                forCellReuseIdentifier: K.top250TableViewCellID)
     }
     func collectionViewConfig() {
+        myPageControl.numberOfPages = homeViewModel.trailersArray.count
+        myPageControl.currentPage = 0
         headerCollectionView.delegate = self
         headerCollectionView.dataSource = self
         headerCollectionView.register(UINib(nibName: K.headerCollectionViewCellID,
-                                              bundle: .main), forCellWithReuseIdentifier: K.headerCollectionViewCellID)
+                                            bundle: .main), forCellWithReuseIdentifier: K.headerCollectionViewCellID)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self
+                                              , selector: #selector(self.changeImage), userInfo: nil, repeats: true)
+        }
     }
     func appAppearanceConfig() {
         let window = UIApplication.shared.windows[0]
@@ -52,6 +60,20 @@ class HomeViewController: MainViewController {
             window.overrideUserInterfaceStyle = .dark
         } else {
             window.overrideUserInterfaceStyle = .light
+        }
+    }
+    @objc func changeImage() {
+        if homeViewModel.counter < homeViewModel.trailersArray.count {
+            let index = IndexPath.init(item: homeViewModel.counter, section: 0)
+            self.headerCollectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
+            myPageControl.currentPage = homeViewModel.counter
+            homeViewModel.counter += 1
+        } else {
+            homeViewModel.counter = 0
+            let index = IndexPath.init(item: homeViewModel.counter, section: 0)
+            self.headerCollectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: false)
+            myPageControl.currentPage = homeViewModel.counter
+            homeViewModel.counter = 1
         }
     }
     // MARK: - Data Methods
@@ -65,47 +87,18 @@ class HomeViewController: MainViewController {
                 if let thirdMovie = await homeViewModel.fetchTrailers(id: "tt0468569"  ) {
                     self.homeViewModel.trailerThree = thirdMovie
                 }
-                DispatchQueue.main.async {
-                    self.homeViewModel.trailersArray = [ self.homeViewModel.trailerOne!, self.homeViewModel.trailerTwo!, self.homeViewModel.trailerThree! ]
-                    print( self.homeViewModel.trailersArray)
-                    self.headerCollectionView.reloadData()
+                DispatchQueue.main.async { [self] in
+                    self.homeViewModel.trailersArray = [ homeViewModel.trailerOne!,
+                                                         homeViewModel.trailerTwo!,
+                                                         homeViewModel.trailerThree!]
+                    headerCollectionView.reloadData()
                 }
             } else {
-                presentAlert(title: "Error While Fetching Trailers", message: (homeViewModel.trailerOne?.errorMessage)!)
+                DispatchQueue.main.async {
+                    self.presentAlert(title: "Error While Fetching Trailers",
+                                      message: "")
+                }
             }
         }
-    }
-}
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
-    }
-    func collectionView(_ collectionView: UICollectionView,
-                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = headerCollectionView.dequeueReusableCell(withReuseIdentifier:
-                                                                K.headerCollectionViewCellID,
-                                                              for: indexPath) as? HeaderCollectionViewCell
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) { [self] in
-//            cell?.movieTitleLabel.text = homeViewModel.trailersArray[indexPath.item].fullTitle
-//            if let url = homeViewModel.trailersArray[indexPath.item].thumbnailUrl {
-//            cell!.movieImageView.kf.setImage(with: URL(string: url))
-//             }
-//            if let url = homeViewModel.top250Movies[indexPath.item].image {
-//            cell!.trailerImageView.kf.setImage(with: URL(string: url))
-//             }
-
-   //     }
-       // cell?.movieImageView.backgroundColor = .green
-        return cell!
-    }
-}
-extension HomeViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let layout = UICollectionViewFlowLayout()
-        layout.minimumInteritemSpacing = 0
-        layout.minimumLineSpacing = 0
-        return CGSize(width: view.frame.size.width, height: 300)
     }
 }

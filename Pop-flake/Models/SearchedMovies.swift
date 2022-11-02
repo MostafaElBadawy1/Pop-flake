@@ -13,4 +13,5 @@ struct SearchedMovie: Codable {
     let title: String
     let image: String?
     let description: String?
+    let errorMessage: String?
 }

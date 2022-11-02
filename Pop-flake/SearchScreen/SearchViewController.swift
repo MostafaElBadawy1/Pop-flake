@@ -9,12 +9,7 @@ class SearchViewController: MainViewController {
     // MARK: - Props
     let noResultslabel = UILabel()
     let searchViewModel = SearchViewModel()
-    var searchController = UISearchController()
-    let myRefreshControl: UIRefreshControl = {
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(SearchViewController.self, action: #selector(refresh(sender:)), for: .valueChanged)
-        return refreshControl
-    }()
+    let searchController = UISearchController()
     // MARK: - IBOutlets
     @IBOutlet weak var searchResultsTableView: UITableView!
     override func viewDidLoad() {
@@ -26,15 +21,14 @@ class SearchViewController: MainViewController {
     func initView() {
         searchControllerSetup()
         tableViewConfig()
-        // networkReachability(loadingIndicator: activityIndicator)
+        monitorNetwork()
     }
     func initViewModel() {
         let searchWord = K.searchWord.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-        // searchMovies(searchWord: searchWord!)
+         searchMovies(searchWord: searchWord!)
     }
     // MARK: - UI Methods
     func tableViewConfig() {
-        searchResultsTableView.refreshControl = myRefreshControl
         searchResultsTableView.register(UINib(nibName: K.moviesTableViewCellID, bundle: .main),
                                         forCellReuseIdentifier: K.moviesTableViewCellID)
         searchResultsTableView.delegate = self
@@ -54,6 +48,10 @@ class SearchViewController: MainViewController {
         noResultslabel.font = UIFont.boldSystemFont(ofSize: 20)
         noResultslabel.frame =  CGRect(x: 150, y: 130, width: 300, height: 50)
         self.view.addSubview(noResultslabel)
+    }
+    override func refreshTableView(refreshControl: UIRefreshControl) {
+        initViewModel()
+        refreshControl.endRefreshing()
     }
     @objc private func refresh(sender: UIRefreshControl) {
         searchMovies(searchWord: "Suits")

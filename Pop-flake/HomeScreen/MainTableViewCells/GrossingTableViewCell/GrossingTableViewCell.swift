@@ -11,7 +11,7 @@ class GrossingTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         tableViewConfig()
-       // fetchGrossingMovies()
+        fetchGrossingMovies()
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
